@@ -186,9 +186,10 @@ nestkick/
 │       ├── tsconfig.build.json
 │       └── tsconfig.json
 │
-├── docs/                                 # docs internes du monorepo
+├── docs/                                 # docs internes et communauté
 │   ├── ARCHITECTURE.md
-│   └── TEMPLATE-SPEC.md
+│   ├── TEMPLATE-SPEC.md
+│   │   │   └── SECURITY.md
 │
 ├── scripts/
 │   ├── release.mjs
@@ -204,7 +205,6 @@ nestkick/
 ├── CONTRIBUTING.md                      
 ├── LICENSE                              
 ├── README.md                            
-├── SECURITY.md                          
 ├── package.json
 ├── pnpm-workspace.yaml
 └── turbo.json
