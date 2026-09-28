@@ -1,3 +1,8 @@
+# Nestkick
+
+## Structure du projet
+
+```text
 nestkick/
 │
 ├── .github/
@@ -203,3 +208,4 @@ nestkick/
 ├── package.json
 ├── pnpm-workspace.yaml
 └── turbo.json
+```
