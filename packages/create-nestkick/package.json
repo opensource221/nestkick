@@ -1,0 +1,15 @@
+{
+  "name": "create-nestkick",
+  "version": "0.1.0",
+  "description": "The ultimate NestJS CLI scaffolding tool",
+  "bin": {
+    "create-nestkick": "./bin/cli.js",
+    "nestkick": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "echo \"Building CLI...\"",
+    "dev": "echo \"Dev mode...\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
