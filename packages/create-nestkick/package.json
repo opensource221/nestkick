@@ -3,13 +3,24 @@
   "version": "0.1.0",
   "description": "The ultimate NestJS CLI scaffolding tool",
   "bin": {
-    "create-nestkick": "./bin/cli.js",
-    "nestkick": "./bin/cli.js"
+    "create-nestkick": "./dist/cli.js",
+    "nestkick": "./dist/cli.js"
   },
   "scripts": {
-    "build": "echo \"Building CLI...\"",
-    "dev": "echo \"Dev mode...\""
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@clack/prompts": "^1.8.1",
+    "commander": "^15.0.0",
+    "execa": "^10.0.1",
+    "fs-extra": "^11.4.1",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^26.6.3",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  }
 }
