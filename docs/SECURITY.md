@@ -14,5 +14,5 @@ currently being supported with security updates.
 
 Please do NOT report security vulnerabilities via public GitHub issues.
 
-If you believe you have found a security vulnerability in Nestkick, please report it to the maintainers privately or via the security advisory tab on GitHub.
+If you believe you have found a security vulnerability in Nestquick, please report it to the maintainers privately or via the security advisory tab on GitHub.
 We will respond as quickly as possible and coordinate a fix and an advisory.

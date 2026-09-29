@@ -1,9 +1,9 @@
-# Nestkick
+# Nestquick
 
 ## Structure du projet
 
 ```text
-nestkick/
+nestquick/
 │
 ├── .github/
 │   ├── workflows/
@@ -22,12 +22,12 @@ nestkick/
 ├── .husky/                               # git hooks (commit-msg, pre-commit)
 │
 ├── packages/
-│   └── create-nestkick/                  # LE CLI (package npm)
+│   └── create-nestquick/                  # LE CLI (package npm)
 │       ├── src/
 │       │   ├── index.ts                  # point d'entrée
 │       │   ├── cli.ts                    # config de la commande
 │       │   ├── commands/
-│       │   │   ├── create.ts             # `npx create-nestkick my-app`
+│       │   │   ├── create.ts             # `npx create-nestquick my-app`
 │       │   │   └── list.ts               # lister les templates dispos
 │       │   ├── prompts/
 │       │   │   ├── project.ts            # nom, description, author

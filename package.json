@@ -1,5 +1,5 @@
 {
-  "name": "nestkick-monorepo",
+  "name": "nestquick-monorepo",
   "private": true,
   "engines": {
     "node": ">=18"

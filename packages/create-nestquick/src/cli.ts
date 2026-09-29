@@ -7,14 +7,14 @@ import { Command } from 'commander';
 const program = new Command();
 
 program
-  .name('create-nestkick')
+  .name('create-nestquick')
   .description('The ultimate NestJS CLI scaffolding tool')
   .version('0.1.0')
   .parse(process.argv);
 
 async function main() {
   console.log();
-  intro(pc.bgCyan(pc.black(' Bienvenue dans Nestkick ! ')));
+  intro(pc.bgCyan(pc.black(' Bienvenue dans Nestquick ! ')));
 
   const project = await text({
     message: 'Quel est le nom de votre projet ?',

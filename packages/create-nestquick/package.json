@@ -1,10 +1,10 @@
 {
-  "name": "create-nestkick",
+  "name": "create-nestquick",
   "version": "0.1.0",
   "description": "The ultimate NestJS CLI scaffolding tool",
   "bin": {
-    "create-nestkick": "./dist/cli.js",
-    "nestkick": "./dist/cli.js"
+    "create-nestquick": "./dist/cli.js",
+    "nestquick": "./dist/cli.js"
   },
   "scripts": {
     "build": "tsup",
