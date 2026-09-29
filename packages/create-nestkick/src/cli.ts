@@ -14,7 +14,7 @@ program
 
 async function main() {
   console.log();
-  intro(pc.bgCyan(pc.black(' 🚀 Bienvenue dans Nestkick ! ')));
+  intro(pc.bgCyan(pc.black(' Bienvenue dans Nestkick ! ')));
 
   const project = await text({
     message: 'Quel est le nom de votre projet ?',
@@ -33,21 +33,50 @@ async function main() {
   const database = await select({
     message: 'Quelle base de données souhaitez-vous utiliser ?',
     options: [
-      { value: 'postgres', label: 'PostgreSQL', hint: 'Recommandé' },
+      { value: 'postgres', label: 'PostgreSQL', hint: 'Recommande' },
       { value: 'mysql', label: 'MySQL' },
+      { value: 'mongodb', label: 'MongoDB' },
       { value: 'none', label: 'Aucune' },
     ],
   });
 
   if (isCancel(database)) {
-    cancel('Opération annulée.');
+    cancel('Operation annulee.');
     process.exit(0);
   }
 
-  // TODO: Logique de génération ici...
-  console.log(`\n${pc.green('✔')} Création du projet ${pc.bold(project as string)} avec ${database}... (Simulation)\n`);
+  let dbUrl: string | symbol = '';
 
-  outro(`🎉 Projet initialisé ! Vous êtes prêt à coder.`);
+  if (database !== 'none') {
+    let placeholder = '';
+    if (database === 'postgres') placeholder = 'postgresql://user:password@localhost:5432/mydb';
+    else if (database === 'mysql') placeholder = 'mysql://user:password@localhost:3306/mydb';
+    else if (database === 'mongodb') placeholder = 'mongodb://localhost:27017/mydb';
+
+    dbUrl = await text({
+      message: 'URL de connexion a la base de donnees ?',
+      placeholder,
+      validate(value) {
+        if (value.length === 0) return 'L\'URL de connexion est requise !';
+      }
+    });
+
+    if (isCancel(dbUrl)) {
+      cancel('Operation annulee.');
+      process.exit(0);
+    }
+  }
+
+  // TODO: Logique de generation ici...
+  console.log(`\n${pc.green('[OK]')} Creation du projet ${pc.bold(project as string)}... (Simulation)`);
+  if (database !== 'none') {
+    console.log(`${pc.green('[OK]')} Base de donnees choisie : ${database}`);
+    console.log(`${pc.green('[OK]')} Connexion : ${dbUrl}\n`);
+  } else {
+    console.log(`${pc.green('[OK]')} Base de donnees : Aucune\n`);
+  }
+
+  outro(`Projet initialise ! Vous etes pret a coder.`);
 }
 
 main().catch(console.error);
